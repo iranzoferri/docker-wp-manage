@@ -8,15 +8,15 @@ docker_volume_backups=${BASE_PATH_WP_VOLUME_BACKUPS}
 
 # Down the project
 function dc_down() {
-  docker-compose -f ${base_path}/${1}/docker-compose.yaml down
+  docker-compose --project-directory ${base_path}/${1} -f ${base_path}/${1}/docker-compose.yaml -- down
 }
 
 # Up the project
 function dc_up() {
-  docker-compose -f ${base_path}/${1}/docker-compose.yaml down
+  docker-compose --project-directory ${base_path}/${1} -f ${base_path}/${1}/docker-compose.yaml -- up -d
 }
 
-# Rsync files 
+# Rsync volumes to backup location
 function backup() {
   rsync -avP ${docker_volumes}/${1}_* \
              ${docker_volume_backups}/ --delete

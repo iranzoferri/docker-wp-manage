@@ -7,3 +7,4 @@
 ## TODO-LIST
 1. Make pull after backup
 2. Project selection dialog, with checkboxes
+3. Make mysql backup, storage it and rotation policy.

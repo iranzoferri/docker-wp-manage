@@ -5,5 +5,5 @@
 
 
 ## TODO-LIST
-1- Make pull after backup
-2- Project selection dialog, with checkboxes
+1. Make pull after backup
+2. Project selection dialog, with checkboxes
